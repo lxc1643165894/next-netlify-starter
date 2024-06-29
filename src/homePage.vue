@@ -32,6 +32,7 @@
 <script>
 
 export default {
+  name: 'homePage',
  data(){
   return{
     msg:'模式选择',
@@ -56,6 +57,8 @@ export default {
   pickPattern(){
         this.cardState=false,
         this.isBookFlip=true
+        this.$router.push('/mainPage')
+       
   }
  }
 }
@@ -135,8 +138,8 @@ html, body, #homePage{
   z-index: 11; 
 }
 .mBtn button{
-  width: 450px;
-  height: 180px;
+  width:80%;
+  height: 50%;
   background-color: transparent; /* 背景透明 */
   background-image: url('./assets/image/ui_btn_2.png'); /* 背景图片 */
   background-size: cover; /* 使图片覆盖整个按钮 */
@@ -164,12 +167,13 @@ html, body, #homePage{
   perspective: 1000px;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(2px);
+  z-index: 14;
 }
 .card{
     /* 相对定位 */
     position: relative;
-    width: 600px;
-    height: 800px;
+    width: 60%;
+    height: 40%;
     /* 圆角 */
     border-radius: 30px;
     /* 鼠标移到元素上光标变为小手 */
@@ -244,19 +248,23 @@ html, body, #homePage{
 }
 /* 书本翻转 */
 .book{
-   width: 500px;
-   height: 600px;
-   position:absolute;
-   top: 30%;
+   width: 100%;
+   height: 50%;
+     justify-content: center;
+  align-items: center;
    display: flex;
    transition: .8s;
+   z-index: 13;
 }
 .bookBox{
+   display: flex;
+  justify-content: center;
+  align-items: center;
   transform-style: preserve-3d;
   perspective: 900px;
   list-style: none;
-  width: 500px;
-  height: 600px;
+  width: 60%;
+  height: 40%;
 }
 .inBook{
   position: absolute;
