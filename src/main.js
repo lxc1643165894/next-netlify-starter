@@ -2,8 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import homePage from './homePage.vue'
 import mainPage from './mainPage.vue'
-
-
+import timeLine from './timeLine.vue'
 // 引入路由
 import router from "./router/router.js";
 
@@ -21,3 +20,7 @@ mainPageApp.mount("#mainPage")
 const AppApp =createApp(App)
 AppApp.use(router)
 AppApp.mount("#App")
+
+const timeLineApp=createApp(timeLine)
+timeLineApp.use(router)
+timeLineApp.mount('#timeLine')

@@ -1,6 +1,7 @@
 
 import homePage from "../homePage.vue"
 import mianPage from "../mainPage.vue"
+import timeLine from "../timeLine.vue"
 import { createRouter, createWebHashHistory } from "vue-router"
 const routes = [
     {
@@ -10,6 +11,10 @@ const routes = [
     {
         path:'/mainPage',
         component: mianPage
+    },
+    {
+       path:'/timeLine',
+       component:timeLine
     }
 ]
 

@@ -1,26 +1,30 @@
 <template>
 <div class="main">
+ <div class="loadIn"  v-if="showLoadIn" ></div>
     <div class="mTitle"><img src="./assets/image/长征标题.png"></div>
      <div class="book">
        <ul :class="['bookBox',{'bookFlip':isBookFlip}]">
-         <li class="inBook"><img src="./assets/image/710101.png"></li>
-         <li class="inBook"><img src="./assets/image/710102.png"></li>
-         <li class="inBook"><img src="./assets/image/710201.png"></li>
-         <li class="inBook"><img src="./assets/image/710202.png"></li>
-         <li class="inBook"><img src="./assets/image/710301.png"></li>
-         <li class="inBook"><img src="./assets/image/710401.png"></li>
-         <li class="inBook"><img src="./assets/image/710601.png"></li>
+         <li class="inBook"><img src="./assets/image/01.jpg"></li>
+         <li class="inBook"><img src="./assets/image/02.jpg"></li>
+         <li class="inBook"><img src="./assets/image/03.jpg"></li>
+         <li class="inBook"><img src="./assets/image/01.jpg"></li>
+         <li class="inBook"><img src="./assets/image/01.jpg"></li>
+         <li class="inBook"><img src="./assets/image/01.jpg"></li>
+         <li class="inBook"><img src="./assets/image/01.jpg"></li>
        </ul>
      </div>
     <div class="mPeople"><img src="./assets/image/lead_people.png"></div>
     <div class="mBottom"><img src="./assets/image/mBottom.png"></div>
     <div class="mBtn"><button id="selectBtn" @click="selectBtn">{{ msg }}</button></div>
     <div class="selectCard" v-show="cardState" >
-      <div :class="['card',{'cardChange': isActive}]" @click="pickPattern">
-          <div class="front">
+      <div :class="['card',{'cardChange': isActive}]">
+          <div class="front" @click="pickPatternA">
+           
             <img src="./assets/image/711004.png">
+             <title style="font-size: 20px; font-family: 'MiSans-Demibold',sans-serif;">{{ cardA }}</title>
           </div>
-          <div class="back">
+          <div class="back" @click="pickPatternB">
+            <title style="font-size: 20px; font-family: 'MiSans-Demibold',sans-serif;">{{ cardB }}</title>
             <img src="./assets/image/710202.png">
           </div>
       </div>
@@ -35,17 +39,27 @@ export default {
   name: 'homePage',
  data(){
   return{
+    showLoadIn: true,
     msg:'模式选择',
+    cardA:'pickPatternA',
+    cardB:'pickPatternB',
     cardState:false,
     isActive:false,
     isDisabled: false,
     isBookFlip:false
   }
  },
+ mounted(){
+   // 2秒后隐藏背景
+    setTimeout(() => {
+      this.showLoadIn = false;
+    }, 2000);
+  },
+ 
  methods:{
+  
   selectBtn(){
     this.cardState=true
-    console.log('11111')
   },
   patternChange(){
      this.isDisabled = true;
@@ -54,21 +68,56 @@ export default {
             this.isDisabled = false;
           }, 1000); //1秒
   },
-  pickPattern(){
+  pickPatternA(){
         this.cardState=false,
         this.isBookFlip=true
-        this.$router.push('/mainPage')
+         // 使用 setTimeout 延时跳转
+    setTimeout(() => {
+        this.$router.push('/timeLine');
+    }, 1000); // 延时时间，单位为毫秒，这里是延时1秒
        
-  }
+  },
+  pickPatternB(){
+        this.cardState=false,
+        this.isBookFlip=true
+        // 使用 setTimeout 延时跳转
+    setTimeout(() => {
+        this.$router.push('/mainPage');
+    }, 1000); // 延时时间，单位为毫秒，这里是延时1秒
+  },
+ 
  }
 }
 </script>
 <style>
+@font-face {
+  font-family: 'MiSans-Demibold';
+  src: url('./font/MiSans-Demibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 html, body, #homePage{
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+}
+.loadIn{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  animation: loadInAnimate 3s;
+}
+@keyframes loadInAnimate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .main{
   width: 100vw; /* 宽度为视窗宽度的100% */
@@ -145,9 +194,10 @@ html, body, #homePage{
   background-size: cover; /* 使图片覆盖整个按钮 */
   border: none; /* 去除按钮边框 */
   color: white; /* 按钮文字颜色 */
-  font-size: 40px; /* 按钮文字大小 */
+  font-size:14px; /* 按钮文字大小 */
   text-align: center; /* 按钮文字居中 */
-  line-height: 50px; /* 使文字垂直居中 */
+  line-height: 14px; /* 使文字垂直居中 */
+   font-family: 'MiSans-Demibold',sans-serif;
   
 }
 
@@ -239,9 +289,9 @@ html, body, #homePage{
     position: relative; /* 相对定位 */
     top: 10%; 
     left:0%; 
-    width: 150px;
-    height: 150px;
-     background-color: transparent; /* 背景透明 */
+    width: 10%;
+    height: 10%;
+    background-color: transparent; /* 背景透明 */
   background-image: url('./assets/image/切换.png'); /* 背景图片 */
   background-size: cover; /* 使图片覆盖整个按钮 */
   border: none; /* 去除按钮边框 */
@@ -263,16 +313,18 @@ html, body, #homePage{
   transform-style: preserve-3d;
   perspective: 900px;
   list-style: none;
-  width: 60%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
 }
 .inBook{
+  width: 100%;
+  height: 100%;
   position: absolute;
   transform-origin: left;
 }
 .inBook img{
-  width: 500px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
 }
 .bookBox li:nth-child(1){
