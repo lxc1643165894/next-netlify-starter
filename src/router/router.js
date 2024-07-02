@@ -2,11 +2,12 @@
 import homePage from "../homePage.vue"
 import mianPage from "../mainPage.vue"
 import timeLine from "../timeLine.vue"
+import NewHomePage from '../NewHomePage.vue'
 import { createRouter, createWebHashHistory } from "vue-router"
 const routes = [
     {
         path: '/',
-        component: homePage
+        component: NewHomePage
     },
     {
         path:'/mainPage',
@@ -15,6 +16,10 @@ const routes = [
     {
        path:'/timeLine',
        component:timeLine
+    },
+    {
+        path:'/NewHomePage',
+        component: homePage
     }
 ]
 

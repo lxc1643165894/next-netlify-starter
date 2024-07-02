@@ -1,6 +1,6 @@
-<template>
+<!-- <template>
 <div class="main">
- <div class="loadIn"  v-if="showLoadIn" ></div>
+ 
     <div class="mTitle"><img src="./assets/image/长征标题.png"></div>
      <div class="book">
        <ul :class="['bookBox',{'bookFlip':isBookFlip}]">
@@ -89,12 +89,16 @@ export default {
  }
 }
 </script>
-<style>
+<style scoped>
 @font-face {
   font-family: 'MiSans-Demibold';
   src: url('./font/MiSans-Demibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+*{
+    margin: 0;
+  padding: 0;
 }
 html, body, #homePage{
   height: 100%;
@@ -116,7 +120,7 @@ html, body, #homePage{
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.5;
   }
 }
 .main{
@@ -183,15 +187,19 @@ html, body, #homePage{
   top: 91%; 
   left: 60%;
   width:40%;
-  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 11; 
 }
 .mBtn button{
-  width:80%;
-  height: 50%;
+  width:100%;
+  height: 100%;
   background-color: transparent; /* 背景透明 */
   background-image: url('./assets/image/ui_btn_2.png'); /* 背景图片 */
-  background-size: cover; /* 使图片覆盖整个按钮 */
+ background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none; /* 去除按钮边框 */
   color: white; /* 按钮文字颜色 */
   font-size:14px; /* 按钮文字大小 */
@@ -383,4 +391,9 @@ html, body, #homePage{
   transition: 4.4s;
 }
 
-</style>
+</style> -->
+<template>
+<div></div>
+</template>
+<style></style>
+<style></style>

@@ -1,17 +1,27 @@
 <!-- App.vue -->
 <template>
-  <div id="app">
+  
+    <div id="app">
     <router-view></router-view>
-  </div>
+    </div>
+
+  
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
 }
 </script>
 
-<style>
+<style >
 /* 全局样式 */
+@font-face {
+  font-family: 'MiSans-Demibold';
+  src: url('./font/MiSans-Demibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 </style>
