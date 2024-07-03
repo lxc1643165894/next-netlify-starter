@@ -1,5 +1,5 @@
 <template>
- 
+ <button class="floating-button" @click="goHomePage"></button>
 <div class="mainPage">
     <div class="startPart" v-show="startTextState">
       <div class="startText" ref="fadeElement">
@@ -127,6 +127,24 @@ export default {
     padding: 0;
     font-family: "MiSans-Demibold",sans-serif;
 }
+        /**返回按钮 */
+        .floating-button {
+            position: fixed;
+            left: 2%;
+            bottom: 15%;
+            width: 50px;
+            height: 50px;
+            background-color:#6e6969;
+            background-image: url('./assets/image/返回.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            cursor: pointer;
+            opacity: 0.8;
+        }
 .mainPage{
   height: 100%;
   width: 100%;
