@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
  <button class="floating-button" @click="goHomePage"></button>
 <div class="mainPage">
     <div class="startPart" v-show="startTextState">
@@ -316,4 +316,20 @@ section,
     padding: 0 20px;
 
 }
-</style>
+</style> -->
+<template>
+<div></div>
+</template>
+<style></style>
+<style>
+@font-face {
+  font-family: 'MiSans-Demibold';
+  src: url('./font/MiSans-Demibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "MiSans-Demibold",sans-serif;
+}</style>

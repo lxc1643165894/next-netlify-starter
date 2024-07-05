@@ -9,19 +9,16 @@
 </template>
 
 <script>
-export default {
-  name: 'App',
 
-}
 </script>
 
-<style >
+<style  scoped>
 /* 全局样式 */
-@font-face {
+/* @font-face {
   font-family: 'MiSans-Demibold';
   src: url('./font/MiSans-Demibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 </style>

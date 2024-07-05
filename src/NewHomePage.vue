@@ -1,6 +1,19 @@
 <template>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <body>
+     <div class="container" v-if="isLoadPage">
+
+        <span class="item item1" style="--delay:-1.1s"></span>
+
+        <span class="item item2" style="--delay:-1.0s"></span>
+
+        <span class="item item3" style="--delay:-0.9s"></span>
+
+        <span class="item item4" style="--delay:-0.8s"></span>
+
+        <span class="item item5" style="--delay:-0.7s"></span>
+
+    </div>
     <header> 
         <div class="logo">
             <img src="./assets/image/logo2.png" alt="logo">
@@ -9,12 +22,12 @@
             <ui :class="['menu',{'active':isActive}]">
                 <li><a href="#"  @click="menuActive">首页</a></li>
                 <li><a @click="goPath('/timeLine')">长征时间线</a></li>
-                <li><a @click="goPath('/mainPage')">长征故事</a></li>
+                <li><a @click="goPath('/NewMainPage')">长征故事</a></li>
             </ui>
             <i class="fa-solid fa-bars" id="toggle" @click="menuActive" style="z-index: 20; color: #fff;"></i>
         </nav>
     </header>
-    <section class="home" v-show="homeActive">
+    <section class="home" v-show="homeActive" >
         <div class="home-content">
               <h1>长征精神立起来</h1>
               <p>——红色文创手工DIY开创者</p>           
@@ -22,15 +35,15 @@
         <div class="book">
             <ul :class="['bookBox',{'bookFlip':isBookFlip}]">
                 <li class="inBook"><img src="./assets/image/长征封面.png"></li>
-                <li class="inBook"><img src="./assets/image/长征内页-于都2.png"></li>
-                <li class="inBook"><img src="./assets/image/长征内页-于都3.png"></li>
-                <li class="inBook"><img src="./assets/image/长征内页-于都4.png"></li>
-                <li class="inBook"><img src="./assets/image/长征内页-于都5.png"></li>
-                <li class="inBook"><img src="./assets/image/长征内页-于都6.png"></li>
-                <li class="inBook"><img src="./assets/image/长征内页-于都7.png"></li> 
+                <li class="inBook"><img src="./assets/image/长征内页-于都2.jpg"></li>
+                <li class="inBook"><img src="./assets/image/长征内页-于都3.jpg"></li>
+                <li class="inBook"><img src="./assets/image/长征内页-于都4.jpg"></li>
+                <li class="inBook"><img src="./assets/image/长征内页-于都5.jpg"></li>
+                <li class="inBook"><img src="./assets/image/长征内页-于都6.jpg"></li>
+                <li class="inBook"><img src="./assets/image/长征内页-于都7.jpg"></li> 
             </ul>
         </div>
-        <button @click="selectBtn">开始</button>
+        <button @click="StartText">开始</button>
         <div class="images"> 
             <div class="img-1"></div>    
             <div class="img-2"></div>
@@ -38,19 +51,21 @@
             <div class="img-4"></div>
             <div class="img-5"></div>        
         </div>
-        <div class="selectCard" v-show="cardState" >
+        <!-- <div class="selectCard" v-show="cardState" >
           <div :class="['card',{'cardChange': isCardActive}]">
             <div class="front" @click="pickPatternA">
+             
                 <img src="./assets/image/长征内页-于都2.png">
-                <title style="font-size: 20px; font-family: 'MiSans-Demibold',sans-serif;">{{ cardA }}</title>
+                   <h2 style="position: relative; top: -20vh;"> cardA</h2>
+                
             </div>
             <div class="back" @click="pickPatternB">
                 <title style="font-size: 20px; font-family: 'MiSans-Demibold',sans-serif;">{{ cardB }}</title>
                 <img src="./assets/image/长征内页-于都4.png">
             </div>
          </div>
-            <button id="changeBtn" @click="patternChange" :disabled="isDisabled"></button>
-      </div>
+            <button id="changeBtn" @click="patternChange" :disabled="isDisabled">开始</button>
+      </div> -->
     </section>
 </body>
 
@@ -58,9 +73,12 @@
 
 <script>
 import gsap from 'gsap';
+import { mapState, mapActions } from 'vuex';
 export default {
   data(){
         return{
+            loaded:false,//加载状态
+            isLoadPage:true,//控制加载动画
             isActive:false,//menu菜单
             homeActive:true,
             isBookFlip:false,//书翻页
@@ -70,23 +88,58 @@ export default {
         }
  
   },
+  computed: {
+    ...mapState({
+      isAdmin: state => state.isAdmin
+    })
+  },
+//    props: {
+//     isFirstLoad: {
+//       type: Boolean,
+//       default: false,
+//     },
+//   },
   mounted() {
-    // 使用 GSAP 创建动画
+    window.onload = this.handlePageLoad;    
+    if(this.isAdmin){
+         // 这里可以触发你想要的动画或其他操作
+      this.isLoadPage=false;
+      console.log('All resources finished loading!');
+      
+      this.startAnimation()   
+    }
+  },
+  methods:{
+     ...mapActions(['toggleAdminStatus']) ,// 将 toggleAdminStatus action 映射到组件的 methods 中
+     handlePageLoad() {
+    
+     this.loaded = true;
+      // 这里可以触发你想要的动画或其他操作
+      this.isLoadPage=false;
+      console.log('All resources finished loading!');
+      
+      this.startAnimation()   
+    },
+    startAnimation() {
+         // 使用 GSAP 创建动画
     // gsap.from('.img-5',1.2, { opacity:0, y:150,delay:0.5 });
     gsap.from('.img-2',1.2, { opacity:0, y:150,delay:0.5 });
-    gsap.from('.img-3', 1.2,{ opacity:0, y:150,delay:0.75 });
-    gsap.from('.img-4',1.2,{ opacity:0, y:150,delay:1 });
-     gsap.from('.img-1',1.2,{ opacity:0, y:150,delay:1.25 });
-    gsap.from('.img-5',1.2,{ opacity:0, y:150,delay:1.5 });
+    gsap.from('.img-3',1.2, { opacity:0, y:150,delay:0.5 });
+    gsap.from('.img-4',1.2, { opacity:0, y:150,delay:0.5 });
+    gsap.from('.img-1',1.2, { opacity:0, y:150,delay:0.5 });
+    gsap.from('.img-5',1.2, { opacity:0, y:150,delay:0.5 });
+
+    // gsap.to('.img-2',1.2, { opacity:1, y:0,delay:0.5 });
+    // gsap.to('.img-3', 1.2,{ opacity:1, y:0,delay:0.75 });
+    // gsap.to('.img-4',1.2,{ opacity:1, y:0,delay:1 });
+    //  gsap.to('.img-1',1.2,{ opacity:1, y:0,delay:1.25 });
+    // gsap.to('.img-5',1.2,{ opacity:1, y:0,delay:1.5 });
     
     gsap.from('h1',1.2, { opacity:0, y:-80,delay:1.25 });
     gsap.from('p',1.2, { opacity:0, y:-80,delay:1 });
     gsap.from('button',1.2, { opacity:0, y:-80,delay:0.75 });
+    },
 
-    
-    
-  },
-  methods:{
     menuActive(){
         this.isActive=!this.isActive
         if(this.homeActive){
@@ -100,9 +153,16 @@ export default {
     goPath(path){
        this.$router.push(path);
     },
-    startAnimate(){
-        
-    },
+     StartText(){
+        this.cardState=false,
+        this.isBookFlip=true
+         // 使用 setTimeout 延时跳转
+    setTimeout(() => {
+        this.$router.push('/timeLine');
+        this.toggleAdminStatus();
+    }, 1000); // 延时时间，单位为毫秒，这里是延时1秒
+       
+  },
     selectBtn(){
     this.cardState=true
      },
@@ -148,7 +208,72 @@ body{
     background: #c5daff;
     overflow: hidden;
     min-width: 300px;
+    
 }
+/**加载动画部分 */
+        .container { 
+            position: absolute;
+            z-index: 999;
+
+            width: 100%;
+
+            height: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color:#c4d5fa;
+
+        }
+
+
+
+        .item {
+
+            width: 12px;
+
+            height: 60px;
+
+            margin: 0 2px;
+
+            background-color: #c4000f;
+
+            animation: wave 1.2s infinite ease-in-out;
+
+            animation-delay: var(--delay);
+
+        }
+
+
+
+        @keyframes wave {
+
+
+
+            0%,
+
+            40%,
+
+            100% {
+
+                transform: scale(0.4);
+
+            }
+
+
+
+            20% {
+
+                transform: scale(1);
+
+            }
+
+        }
+
+/**加载动画部分结束 */
 header{
     position: relative;
     z-index: 20;
@@ -241,7 +366,8 @@ header nav #toggle{
 .home .images .img-4,
 .home .images .img-5
 {
- 
+    /* transform: translateY(10vh);
+    opacity: 0; */
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -255,7 +381,7 @@ header nav #toggle{
     background-size: cover;
 }
 .home .images .img-2{
-    background: url(./assets/image/2.png);
+    background: url(./assets/image/2.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -295,6 +421,7 @@ header nav #toggle{
     /* 相对定位 */
     position: relative;
     width: 40vh;
+    margin-top: -18vh;
     /* 圆角 */
     border-radius: 30px;
     /* 鼠标移到元素上光标变为小手 */
@@ -360,15 +487,20 @@ header nav #toggle{
     }
 }
 #changeBtn{
-    position: relative; /* 相对定位 */
-    top: 10%; 
-    left:0%; 
-    width: 10%;
-    height: 10%;
-    background-color: transparent; /* 背景透明 */
-  background-image: url('./assets/image/返回.png'); /* 背景图片 */
-  background-size: cover; /* 使图片覆盖整个按钮 */
-  border: none; /* 去除按钮边框 */
+    position: relative;
+    z-index: 20;
+    left: auto;
+    top: 15vh;
+    margin-top: 45vh;
+    background-color: #c4000f;
+    padding: 0.45rem 2.1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2.5rem;
 }
 
 /* book */
@@ -465,7 +597,7 @@ header nav #toggle{
     }
     .home h1{
         margin-top: 65px;
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: 400;
         padding-top: 0;
     }
@@ -477,13 +609,13 @@ header nav #toggle{
     position: relative;
     z-index: 20;
     left: auto;
-    margin-top: 50vh;
+    margin-top: 45vh;
     background-color: #c4000f;
     padding: 0.45rem 2.1rem;
     outline: none;
     border: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
     border-radius: 2.5rem;

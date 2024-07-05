@@ -2,90 +2,119 @@
 <button class="floating-button" @click="goHomePage"></button>
  <div class="shell" id="shell">
         <div class="header">
-            <h2 class="title">红军长征“立”起来</h2> 
+            <h2 class="title">长征精神“立”起来</h2> 
         </div>
         <div class="timeline">
-            <div class="item" data-text="长征出发">
+            <div class="item" data-text="于都出发" @click="goPath('/NewMainPage')">
                 <div class="content">
-                    <img src="./assets/image/长征出发纪念碑.png" alt="" class="img">
-                    <h2 class="content-title">1933</h2>
+                    <img src="./assets/image/于都出发.jpeg" alt="" class="img">
+                    <h2 class="content-title">1933.10</h2>
                     <p class="content-desc">
                         1933年初，日军大举入侵华北，中华民族的危机日益严重，国民党政府却置民族危亡于不顾，仍旧坚持推行“攘外必先安内”的反动方针，决心要消灭共产党和红军......
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="测试文本">
+            <div class="item" data-text="血战湘江" @click="goPath('/NewMainPage')">
                 <div class="content">
-                    <img src="./assets/image/井冈山革博1.jpg" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
+                    <img src="./assets/image/MainPage_5_1.jpg" alt="" class="img">
+                    <h2 class="content-title">1934.11.27</h2>
                     <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
+                        1934年11月27日至12月1日，我亲身经历了关系中央红军生死存亡的一战——湘江战役。当我率领红军大部队行至广西北部的湘江地区时，我们在兴安县、全州县和灌阳县与国民党军展开了殊死的战斗，持续了整整五昼夜......
                     </p>
                 </div>
             </div>
-            <div class="item" data-text="测试文本">
+            <div class="item" data-text="遵义会议" @click="goPath('/MainPage_two')" >
                 <div class="content">
-                    <img src="./assets/image/红井3.jpg" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
+                    <img src="./assets/image/遵义会议.jpeg" alt="" class="img">
+                    <h2 class="content-title">1935.1.15</h2>
                     <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" data-text="测试文本">
-                <div class="content">
-                    <img src="./assets/image/黄洋界景点2.jpg" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
-                    <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
+                        在湘江战役之后，惨重的损失确实引起了军中广大干部和战士对王明军事路线的怀疑。尽管我们中央红军仍然按照原定计划向湘西前进，但当时的军事态势已经发生了显著的变化。蒋介石已判明我们的行动企图，并在我们前行的道路上部署了重兵。面对这样的危急情况，我深感必须做出重大的战略调整......
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="测试文本">
+            <div class="item" data-text="巧渡金沙河">
                 <div class="content">
-                    <img src="./assets/image/出发雕塑.png" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
+                    <img src="./assets/image/巧渡金沙江.jpg" alt="" class="img">
+                    <h2 class="content-title">1935.5.3</h2>
                     <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
-                    </p>
-                </div>
-            </div>
-            <div class="item" data-text="测试文本">
-                <div class="content">
-                    <img src="./assets/image/黄洋界6.jpg" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
-                    <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
+                       遵义会议之后，我成为了中央政治局常委。在川滇黔边境的鸡鸣三省村召开的常委会议上，我们进行了常委的重新分工。不少同志提议由我来主持工作，但我认为在当前形势下，由张闻天同志代替博古负总责更为合适，我将全力作为周恩来同志在军事指挥上的帮助者。
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="测试文本">
+            <div class="item" data-text="强渡大渡河">
                 <div class="content">
-                    <img src="./assets/image/集结大桥全景.jpg" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
+                    <img src="./assets/image/强渡大渡河.png" alt="" class="img">
+                    <h2 class="content-title">1935.5.29</h2>
                     <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
+                       那个烽火连天的1935年5月，我们红军在四川的征程中，遭遇了国民党军队的猛烈追击和重重围剿。面对如此严峻的形势，我深知，我们必须采取果断的行动，才能摆脱敌人的包围。于是，我决定实施强渡大渡河的战略。
+                    </p>
+                </div>
+            </div>
+            <div class="item" data-text="飞夺泸定桥">
+                <div class="content">
+                    <img src="./assets/image/飞夺泸定桥.jpg" alt="" class="img">
+                    <h2 class="content-title">1935.5.29</h2>
+                    <p class="content-desc">
+                       1935年5月25日，中央红军长征先头部队红1军团第1师第1团一部在四川省安顺场强渡大渡河成功后，蒋介石急调川军2个旅增援泸定桥。为了迅速渡过大渡河，挫败敌人的阴谋，我决定派红一军团及干部团由安顺场继续渡河，沿大渡河左岸北上，而主力则由安顺场沿大渡河右岸北上，两路并进，火速夺占泸定桥。
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="测试文本">
+            <div class="item" data-text="爬雪山">
                 <div class="content">
-                    <img src="./assets/image/井冈山革博2.jpg" alt="" class="img">
-                    <h2 class="content-title">2002</h2>
+                    <img src="./assets/image/爬雪山.jpg" alt="" class="img">
+                    <h2 class="content-title">1935.6.12</h2>
                     <p class="content-desc">
-                        这是一段测试文本你可以自定义你需要的文本内容
-                        这是一段测试文本你可以自定义你需要的文本内容
+                       在长征途中，翻越雪山的经历至今历历在目，其中尤以翻越夹金山和党岭山的记忆最为深刻......
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="懋功会师">
+                <div class="content">
+                    <img src="./assets/image/懋功会师.jpeg" alt="" class="img">
+                    <h2 class="content-title">19.35.6</h2>
+                    <p class="content-desc">
+                      1935年6月，我们中央红军在李先念率领的红四方面军先头部队的迎接下，在懋功胜利会师了。
+                    </p>
+                </div>
+            </div>
+             <div class="item" data-text="过草地">
+                <div class="content">
+                    <img src="./assets/image/过草地.jpeg" alt="" class="img">
+                    <h2 class="content-title">1935.8.21</h2>
+                    <p class="content-desc">
+                        1935年6月中旬，我率领的红一方面军从四川宝兴进入阿坝州，开始了长征途中最艰难的一段旅程。我们翻越了夹金山、梦笔山、垭口山等数座海拔在4000多米以上的高原雪山，历经千辛万苦，最终在8月进入了川西北草地......
+                    </p>
+                </div>
+            </div>
+             <div class="item" data-text="激战腊子口">
+                <div class="content">
+                    <img src="./assets/image/激战腊子口.jpeg" alt="" class="img">
+                    <h2 class="content-title">1935.9.16</h2>
+                    <p class="content-desc">
+                        在长征的途中，我们面临了无数的艰难险阻，其中腊子口的战斗尤为激烈和关键。那是1935年9月的一天，我率领的中国工农红军陕甘支队正沿着甘肃南部向北挺进。
+                    </p>
+                </div>
+            </div>
+             <div class="item" data-text="大会师">
+                <div class="content">
+                    <img src="./assets/image/大会师.jpeg" alt="" class="img">
+                    <h2 class="content-title">1935.10</h2>
+                    <p class="content-desc">
+                        在红军长征的壮阔征程中，大会师那一刻的到来，对我军而言，具有无比深远的意义。那是我们无数红军战士，在历经风霜雨雪、跋涉万水千山后，终于迎来的一次盛大团聚。这不仅是战士们心中的一次狂欢，更是中国共产党领导下的人民军队在艰苦卓绝的斗争中所展现出的无比坚韧与团结的象征。
+                    </p>
+                </div>
+            </div>
+             <div class="item" data-text="胜利会师">
+                <div class="content">
+                    <img src="./assets/image/胜利会师.jpg" alt="" class="img">
+                    <h2 class="content-title">1935.10.9</h2>
+                    <p class="content-desc">
+                       经过长征途中的长途跋涉和艰苦斗争，1935年9月13日，我率领中共中央、中央军委以及由红一方面军主力第一、第三军团与直属部队组成的陕甘支队，从俄界继续北上。我们攻占了天险腊子口，进占了哈达铺，并成功翻越了六盘山。这一路上，我们克服了无数艰难险阻，但始终保持着坚定的信念和昂扬的斗志。
                     </p>
                 </div>
             </div>
@@ -179,6 +208,9 @@ export default {
      goHomePage(){
      this.$router.push('/');
     },
+    goPath(path){
+       this.$router.push(path);
+    },
     initializeTimeline() {
       $("#shell").timeline();
     }
@@ -236,7 +268,7 @@ export default {
         }
 
         .title {
-            color: #fff;
+            color:#be1f1f;
             font-size: 46px;
             font-weight: normal;
             margin: 0;
