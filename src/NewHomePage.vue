@@ -29,7 +29,7 @@
     </header>
     <section class="home" v-show="homeActive" >
         <div class="home-content">
-              <h1>长征精神立起来</h1>
+              <h1>长征精神“立”起来</h1>
               <p>——红色文创手工DIY开创者</p>           
         </div> 
         <div class="book">

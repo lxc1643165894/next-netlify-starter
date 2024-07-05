@@ -12,15 +12,14 @@
 
 <header class="header">
 
-   <div id="menu-btn" class="fas fa-bars icons"></div>
+   <div id="menu-btn" :class="['fas', 'fa-bars', 'icons', { 'fa-times': isMenuActive }]" @click="toggleMenu"></div>
    <!-- <div id="search-btn" class="fas fa-search icons"></div> -->
 
-   <nav class="navbar">
-      <a href="#home">首页</a>
-      <a href="#menu">上一章节</a>
-      <a href="#about">下一章节</a>
+   <nav :class="['navbar',{'active':isMenuActive}]">
+      <a @click="goPath('/')">首页</a>
+      <a @click="goPath('/MainPage_two')">下一章节</a>
       <span class="space"></span>
-      <a href="#reviews">长征时间线</a>
+      <a @click="goPath('/timeLine')">长征时间线</a>
    </nav>
 
    <!-- <a href="#" class="fas fa-shopping-cart icons"></a> -->
@@ -170,6 +169,7 @@
 export default{
   data(){
   return{
+    isMenuActive:false,
    items: [
   {
     Plot:"失利",
@@ -235,6 +235,9 @@ methods: {
     goPath(path){
        this.$router.push(path);
     },
+    toggleMenu() {
+      this.isMenuActive = !this.isMenuActive; // 切换菜单状态
+    },
     scrollTo(sectionId) {
       const section = document.getElementById(sectionId);
       if (section) {
@@ -248,7 +251,7 @@ methods: {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'MiSans-Regular', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -441,9 +444,12 @@ section {
  line-height: 6rem;
   text-transform: uppercase;
   color: #fff;
+
 }
 
 .home .content p {
+      text-align: left;
+    text-indent: 2em;
   font-size: 1.7rem;
   line-height: 2;
   color: #aaa;
@@ -479,12 +485,16 @@ section {
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
+      text-align: left;
+    text-indent: 2em;
 }
 
 .service .box p {
   font-size: 1.5rem;
   line-height: 2;
   color: #aaa;
+      text-align: left;
+    text-indent: 2em;
 }
 
 .menu .box-container {
@@ -525,6 +535,7 @@ section {
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
+
 }
 
 .menu .box-container .box .content .price {
@@ -807,6 +818,7 @@ section {
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
+
 }
 
 .blogs .box-container .box .content p {
@@ -814,6 +826,8 @@ section {
   line-height: 2;
   color: #aaa;
   padding: 1.5rem 0;
+      text-align: left;
+    text-indent: 2em;
 }
 
 .footer {

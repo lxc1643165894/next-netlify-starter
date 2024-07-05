@@ -5,116 +5,116 @@
             <h2 class="title">长征精神“立”起来</h2> 
         </div>
         <div class="timeline">
-            <div class="item" data-text="于都出发" @click="goPath('/NewMainPage')">
+            <div class="item" data-text="1933年十月" @click="goPath('/NewMainPage')">
                 <div class="content">
                     <img src="./assets/image/于都出发.jpeg" alt="" class="img">
-                    <h2 class="content-title">1933.10</h2>
+                    <h2 class="content-title">于都出发</h2>
                     <p class="content-desc">
                         1933年初，日军大举入侵华北，中华民族的危机日益严重，国民党政府却置民族危亡于不顾，仍旧坚持推行“攘外必先安内”的反动方针，决心要消灭共产党和红军......
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="血战湘江" @click="goPath('/NewMainPage')">
+            <div class="item" data-text="1934年十一月" @click="goPath('/NewMainPage')">
                 <div class="content">
                     <img src="./assets/image/MainPage_5_1.jpg" alt="" class="img">
-                    <h2 class="content-title">1934.11.27</h2>
+                    <h2 class="content-title">湘江战役</h2>
                     <p class="content-desc">
-                        1934年11月27日至12月1日，我亲身经历了关系中央红军生死存亡的一战——湘江战役。当我率领红军大部队行至广西北部的湘江地区时，我们在兴安县、全州县和灌阳县与国民党军展开了殊死的战斗，持续了整整五昼夜......
+                        10月21日，红军开始突围，25日突破第一道封锁线11月5日至8日，在湖南的汝城和广东的城口之间突破第二道封锁线；11月13日至15日，在郴县、良田、宜章、乐昌之间突破了第三道封锁线；11月27日至12月1日，红军苦战五昼夜，从广西全州、兴安间抢渡湘江，突破了国民党军的第四道封锁线。这就是著名的湘江战役。
                     </p>
                 </div>
             </div>
-            <div class="item" data-text="遵义会议" @click="goPath('/MainPage_two')" >
+            <div class="item" data-text="1935年一月" @click="goPath('/MainPage_two')" >
                 <div class="content">
                     <img src="./assets/image/遵义会议.jpeg" alt="" class="img">
-                    <h2 class="content-title">1935.1.15</h2>
+                    <h2 class="content-title">遵义会议</h2>
                     <p class="content-desc">
-                        在湘江战役之后，惨重的损失确实引起了军中广大干部和战士对王明军事路线的怀疑。尽管我们中央红军仍然按照原定计划向湘西前进，但当时的军事态势已经发生了显著的变化。蒋介石已判明我们的行动企图，并在我们前行的道路上部署了重兵。面对这样的危急情况，我深感必须做出重大的战略调整......
+                        在湘江战役之后，惨重的损失确实引起了军中广大干部和战士对王明军事路线的怀疑。尽管中央红军仍然按照原定计划向湘西前进，但当时的军事态势已经发生了显著的变化。蒋介石已判明红军的行动企图，并在中央红军前行的道路上部署了重兵......
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="巧渡金沙河">
+            <div class="item" data-text="1935年五月三日">
                 <div class="content">
                     <img src="./assets/image/巧渡金沙江.jpg" alt="" class="img">
-                    <h2 class="content-title">1935.5.3</h2>
+                    <h2 class="content-title">巧渡金沙江</h2>
                     <p class="content-desc">
-                       遵义会议之后，我成为了中央政治局常委。在川滇黔边境的鸡鸣三省村召开的常委会议上，我们进行了常委的重新分工。不少同志提议由我来主持工作，但我认为在当前形势下，由张闻天同志代替博古负总责更为合适，我将全力作为周恩来同志在军事指挥上的帮助者。
+                       遵义会议之后，毛泽东成为了中央政治局常委。在川滇黔边境的鸡鸣三省村召开的常委会议上，中央军委进行了常委的重新分工。不少同志提议由毛泽东来主持工作。
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="强渡大渡河">
+            <div class="item" data-text="1935年五月">
                 <div class="content">
-                    <img src="./assets/image/强渡大渡河.png" alt="" class="img">
-                    <h2 class="content-title">1935.5.29</h2>
+                    <img src="./assets/image/强渡大渡河.jpg" alt="" class="img">
+                    <h2 class="content-title">强渡大渡河</h2>
                     <p class="content-desc">
-                       那个烽火连天的1935年5月，我们红军在四川的征程中，遭遇了国民党军队的猛烈追击和重重围剿。面对如此严峻的形势，我深知，我们必须采取果断的行动，才能摆脱敌人的包围。于是，我决定实施强渡大渡河的战略。
+                       那个烽火连天的1935年5月，红军在四川的征程中，遭遇了国民党军队的猛烈追击和重重围剿。面对如此严峻的形势，必须采取果断的行动，才能摆脱敌人的包围。于是，毛泽东决定实施强渡大渡河的战略。
                     </p>
                 </div>
             </div>
-            <div class="item" data-text="飞夺泸定桥">
+            <div class="item" data-text="1935年五月">
                 <div class="content">
                     <img src="./assets/image/飞夺泸定桥.jpg" alt="" class="img">
-                    <h2 class="content-title">1935.5.29</h2>
+                    <h2 class="content-title">飞夺泸定桥</h2>
                     <p class="content-desc">
-                       1935年5月25日，中央红军长征先头部队红1军团第1师第1团一部在四川省安顺场强渡大渡河成功后，蒋介石急调川军2个旅增援泸定桥。为了迅速渡过大渡河，挫败敌人的阴谋，我决定派红一军团及干部团由安顺场继续渡河，沿大渡河左岸北上，而主力则由安顺场沿大渡河右岸北上，两路并进，火速夺占泸定桥。
+                       1935年5月25日，中央红军长征先头部队红1军团第1师第1团一部在四川省安顺场强渡大渡河成功后，蒋介石急调川军2个旅增援泸定桥。为了迅速渡过大渡河，挫败敌人的阴谋，毛泽东决定派红一军团及干部团由安顺场继续渡河，沿大渡河左岸北上，而主力则由安顺场沿大渡河右岸北上，两路并进，火速夺占泸定桥。
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="爬雪山">
+            <div class="item" data-text="1935年六月">
                 <div class="content">
                     <img src="./assets/image/爬雪山.jpg" alt="" class="img">
-                    <h2 class="content-title">1935.6.12</h2>
+                    <h2 class="content-title">爬雪山</h2>
                     <p class="content-desc">
                        在长征途中，翻越雪山的经历至今历历在目，其中尤以翻越夹金山和党岭山的记忆最为深刻......
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="懋功会师">
+            <div class="item" data-text="1935年6月">
                 <div class="content">
                     <img src="./assets/image/懋功会师.jpeg" alt="" class="img">
-                    <h2 class="content-title">19.35.6</h2>
+                    <h2 class="content-title">懋功会师</h2>
                     <p class="content-desc">
-                      1935年6月，我们中央红军在李先念率领的红四方面军先头部队的迎接下，在懋功胜利会师了。
+                      1935年6月，中央红军在李先念率领的红四方面军先头部队的迎接下，在懋功胜利会师了。
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="过草地">
+             <div class="item" data-text="1935年八月">
                 <div class="content">
                     <img src="./assets/image/过草地.jpeg" alt="" class="img">
-                    <h2 class="content-title">1935.8.21</h2>
+                    <h2 class="content-title">过草地</h2>
                     <p class="content-desc">
-                        1935年6月中旬，我率领的红一方面军从四川宝兴进入阿坝州，开始了长征途中最艰难的一段旅程。我们翻越了夹金山、梦笔山、垭口山等数座海拔在4000多米以上的高原雪山，历经千辛万苦，最终在8月进入了川西北草地......
+                        1935年6月中旬，毛泽东率领的红一方面军从四川宝兴进入阿坝州，开始了长征途中最艰难的一段旅程。红军翻越了夹金山、梦笔山、垭口山等数座海拔在4000多米以上的高原雪山，历经千辛万苦，最终在8月进入了川西北草地......
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="激战腊子口">
+             <div class="item" data-text="1935年九月">
                 <div class="content">
                     <img src="./assets/image/激战腊子口.jpeg" alt="" class="img">
-                    <h2 class="content-title">1935.9.16</h2>
+                    <h2 class="content-title">激战腊子口</h2>
                     <p class="content-desc">
-                        在长征的途中，我们面临了无数的艰难险阻，其中腊子口的战斗尤为激烈和关键。那是1935年9月的一天，我率领的中国工农红军陕甘支队正沿着甘肃南部向北挺进。
+                        在长征的途中，红军面临了无数的艰难险阻，其中腊子口的战斗尤为激烈和关键。那是1935年9月的一天，毛泽东率领的中国工农红军陕甘支队正沿着甘肃南部向北挺进。
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="大会师">
+             <div class="item" data-text="1935年十月">
                 <div class="content">
                     <img src="./assets/image/大会师.jpeg" alt="" class="img">
-                    <h2 class="content-title">1935.10</h2>
+                    <h2 class="content-title">大会师</h2>
                     <p class="content-desc">
-                        在红军长征的壮阔征程中，大会师那一刻的到来，对我军而言，具有无比深远的意义。那是我们无数红军战士，在历经风霜雨雪、跋涉万水千山后，终于迎来的一次盛大团聚。这不仅是战士们心中的一次狂欢，更是中国共产党领导下的人民军队在艰苦卓绝的斗争中所展现出的无比坚韧与团结的象征。
+                        在红军长征的壮阔征程中，大会师那一刻的到来，对我军而言，具有无比深远的意义。那是无数红军战士，在历经风霜雨雪、跋涉万水千山后，终于迎来的一次盛大团聚。这不仅是战士们心中的一次狂欢，更是中国共产党领导下的人民军队在艰苦卓绝的斗争中所展现出的无比坚韧与团结的象征。
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="胜利会师">
+             <div class="item" data-text="1935年十月九日">
                 <div class="content">
                     <img src="./assets/image/胜利会师.jpg" alt="" class="img">
-                    <h2 class="content-title">1935.10.9</h2>
+                    <h2 class="content-title">胜利大会师</h2>
                     <p class="content-desc">
-                       经过长征途中的长途跋涉和艰苦斗争，1935年9月13日，我率领中共中央、中央军委以及由红一方面军主力第一、第三军团与直属部队组成的陕甘支队，从俄界继续北上。我们攻占了天险腊子口，进占了哈达铺，并成功翻越了六盘山。这一路上，我们克服了无数艰难险阻，但始终保持着坚定的信念和昂扬的斗志。
+                       经过长征途中的长途跋涉和艰苦斗争，1935年9月13日，毛泽东率领中共中央、中央军委以及由红一方面军主力第一、第三军团与直属部队组成的陕甘支队，从俄界继续北上。红军攻占了天险腊子口，进占了哈达铺，并成功翻越了六盘山。这一路上，中央红军克服了无数艰难险阻，但始终保持着坚定的信念和昂扬的斗志。
                     </p>
                 </div>
             </div>
@@ -222,6 +222,7 @@ export default {
             padding: 0;
             margin: 0;
             font-family: "MiSans-Demibold",sans-serif;
+             overflow-x: hidden;
         }
         /**返回按钮 */
         .floating-button {
@@ -269,7 +270,7 @@ export default {
 
         .title {
             color:#be1f1f;
-            font-size: 46px;
+            font-size: 40px;
             font-weight: normal;
             margin: 0;
         }
@@ -285,7 +286,7 @@ export default {
 
         .content-title {
             font-weight: normal;
-            font-size: 66px;
+            font-size: 35px;
             margin: -10px 0 0 0;
             transition: 0.4s;
             padding: 0 10px;
@@ -299,6 +300,7 @@ export default {
             box-sizing: border-box;
             color: rgba(255, 255, 255, 0.7);
             line-height: 25px;
+            text-indent: 2em;
         }
 
         .timeline:before {
@@ -336,10 +338,11 @@ export default {
             padding-left: 15px;
             opacity: 0;
             right: calc(-100% - 56px);
-            font: 900 20px '';
+            font: 800 15px '';
             letter-spacing: 5px;
-        }
 
+        }
+ 
         .item:nth-child(even) {
             align-self: flex-end;
         }
@@ -397,7 +400,7 @@ export default {
             .item {
                 align-self: baseline !important;
                 width: 100%;
-                padding: 0 30px 150px 80px;
+                padding: 0 30px 150px 100px;
             }
 
             .item:before {
@@ -405,7 +408,7 @@ export default {
                 padding: 0 !important;
                 top: 50px;
                 text-align: center !important;
-                width: 60px;
+                width: 80px;
                 border: none !important;
             }
 
