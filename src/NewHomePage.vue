@@ -597,7 +597,7 @@ header nav #toggle{
     }
     .home h1{
         margin-top: 65px;
-        font-size: 4rem;
+        font-size: 3.8rem;
         font-weight: 400;
         padding-top: 0;
     }
@@ -657,5 +657,14 @@ header nav #toggle{
         background-color: #8cdcbe;
         color: #0a2f44;
     }
+}
+@media (max-width:380px) {
+     .home h1{
+        
+        font-size: 3.2rem;
+       
+       
+    }
+    
 }
 </style>

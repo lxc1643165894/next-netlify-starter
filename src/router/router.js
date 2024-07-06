@@ -77,9 +77,17 @@ const router = createRouter({
 //         router.replace({ name: 'Home', query: { firstLoad: false } });
 //     }
 // });
-router.beforeEach((to, from, next) => {
-    // 滚动到页面顶部
-    window.scrollTo(0, 0);
-    next();
+router.afterEach(() => {
+    // 使用 setTimeout 确保在 DOM 更新之后执行滚动
+    setTimeout(() => {
+        // 滚动页面的主滚动条
+        window.scrollTo(0, 0);
+
+        // 滚动所有其他滚动容器
+        const scrollableElements = document.querySelectorAll('.scrollable');
+        scrollableElements.forEach(element => {
+            element.scrollTop = 0;
+        });
+    }, 0);
 });
 export default router;

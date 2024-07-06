@@ -5,7 +5,7 @@
             <h2 class="title">长征精神“立”起来</h2> 
         </div>
         <div class="timeline">
-            <div class="item" data-text="1933年十月" @click="goPath('/NewMainPage')">
+            <div class="item" data-text="1933年10月" @click="goPath('/NewMainPage')">
                 <div class="content">
                     <img src="./assets/image/于都出发.jpeg" alt="" class="img">
                     <h2 class="content-title">于都出发</h2>
@@ -15,26 +15,26 @@
                 </div>
             </div>
 
-            <div class="item" data-text="1934年十一月" @click="goPath('/NewMainPage')">
+            <div class="item" data-text="1934年11月" @click="goPath('/NewMainPage')">
                 <div class="content">
                     <img src="./assets/image/MainPage_5_1.jpg" alt="" class="img">
                     <h2 class="content-title">湘江战役</h2>
                     <p class="content-desc">
-                        10月21日，红军开始突围，25日突破第一道封锁线11月5日至8日，在湖南的汝城和广东的城口之间突破第二道封锁线；11月13日至15日，在郴县、良田、宜章、乐昌之间突破了第三道封锁线；11月27日至12月1日，红军苦战五昼夜，从广西全州、兴安间抢渡湘江，突破了国民党军的第四道封锁线。这就是著名的湘江战役。
+                        湘江战役，是中央红军突围以来最壮烈、最关键的一仗，是关系中央红军的生死存亡之战，也是决定长征前途的命运之战。
                     </p>
                 </div>
             </div>
-            <div class="item" data-text="1935年一月" @click="goPath('/MainPage_two')" >
+            <div class="item" data-text="1935年1月" @click="goPath('/MainPage_two')" >
                 <div class="content">
                     <img src="./assets/image/遵义会议.jpeg" alt="" class="img">
                     <h2 class="content-title">遵义会议</h2>
                     <p class="content-desc">
-                        在湘江战役之后，惨重的损失确实引起了军中广大干部和战士对王明军事路线的怀疑。尽管中央红军仍然按照原定计划向湘西前进，但当时的军事态势已经发生了显著的变化。蒋介石已判明红军的行动企图，并在中央红军前行的道路上部署了重兵......
+                        1935年1月15日至17日，中共中央政治局在贵州遵义召开的扩大会议，着重总结了第五次反“围剿”失败的经验教训。
                     </p>
                 </div>
             </div>
 
-            <div class="item" data-text="1935年五月三日">
+            <div class="item" data-text="1935年5月3日" @click="goPath('/MainPage_three')">
                 <div class="content">
                     <img src="./assets/image/巧渡金沙江.jpg" alt="" class="img">
                     <h2 class="content-title">巧渡金沙江</h2>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="item" data-text="1935年五月">
+            <div class="item" data-text="1935年5月">
                 <div class="content">
                     <img src="./assets/image/强渡大渡河.jpg" alt="" class="img">
                     <h2 class="content-title">强渡大渡河</h2>
@@ -53,7 +53,7 @@
                     </p>
                 </div>
             </div>
-            <div class="item" data-text="1935年五月">
+            <div class="item" data-text="1935年5月">
                 <div class="content">
                     <img src="./assets/image/飞夺泸定桥.jpg" alt="" class="img">
                     <h2 class="content-title">飞夺泸定桥</h2>
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="item" data-text="1935年六月">
+            <div class="item" data-text="1935年6月">
                 <div class="content">
                     <img src="./assets/image/爬雪山.jpg" alt="" class="img">
                     <h2 class="content-title">爬雪山</h2>
@@ -82,7 +82,7 @@
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年八月">
+             <div class="item" data-text="1935年7月">
                 <div class="content">
                     <img src="./assets/image/过草地.jpeg" alt="" class="img">
                     <h2 class="content-title">过草地</h2>
@@ -91,7 +91,7 @@
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年九月">
+             <div class="item" data-text="1935年9月">
                 <div class="content">
                     <img src="./assets/image/激战腊子口.jpeg" alt="" class="img">
                     <h2 class="content-title">激战腊子口</h2>
@@ -100,7 +100,7 @@
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年十月">
+             <div class="item" data-text="1935年11月">
                 <div class="content">
                     <img src="./assets/image/大会师.jpeg" alt="" class="img">
                     <h2 class="content-title">大会师</h2>
@@ -109,7 +109,7 @@
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年十月九日">
+             <div class="item" data-text="1935年10月">
                 <div class="content">
                     <img src="./assets/image/胜利会师.jpg" alt="" class="img">
                     <h2 class="content-title">胜利大会师</h2>
