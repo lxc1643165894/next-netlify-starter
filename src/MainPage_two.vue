@@ -18,6 +18,7 @@
    <nav :class="['navbar',{'active':isMenuActive}]">
       <a @click="goPath('/')">首页</a>
       <a @click="goPath('/NewMainPage')">上一章节</a>
+      <a @click="goPath('/MainPage_three')">下一章节</a>
       <span class="space"></span>
       <a @click="goPath('/timeLine')">长征时间线</a>
    </nav>

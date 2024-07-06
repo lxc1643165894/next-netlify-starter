@@ -1,5 +1,14 @@
 <template>
 <button class="floating-button" @click="goHomePage"></button>
+<PopUpWindows :isVisible="showModal" @close="toggleModal">
+      <template #header>
+        <h2 class="modal-header">提示</h2>
+      </template>
+      <template #body>
+        <p class="modal-body">点击对应图片了解更多信息</p>
+      </template>
+
+</PopUpWindows>
  <div class="shell" id="shell">
         <div class="header">
             <h2 class="title">长征精神“立”起来</h2> 
@@ -44,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="item" data-text="1935年5月">
+            <div class="item" data-text="1935年5月" @click="goPath('/MainPage_three')"  >
                 <div class="content">
                     <img src="./assets/image/强渡大渡河.jpg" alt="" class="img">
                     <h2 class="content-title">强渡大渡河</h2>
@@ -53,7 +62,7 @@
                     </p>
                 </div>
             </div>
-            <div class="item" data-text="1935年5月">
+            <div class="item" data-text="1935年5月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/飞夺泸定桥.jpg" alt="" class="img">
                     <h2 class="content-title">飞夺泸定桥</h2>
@@ -63,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="item" data-text="1935年6月">
+            <div class="item" data-text="1935年6月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/爬雪山.jpg" alt="" class="img">
                     <h2 class="content-title">爬雪山</h2>
@@ -73,34 +82,34 @@
                 </div>
             </div>
 
-            <div class="item" data-text="1935年6月">
+            <div class="item" data-text="1935年6月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/懋功会师.jpeg" alt="" class="img">
                     <h2 class="content-title">懋功会师</h2>
                     <p class="content-desc">
-                      1935年6月，中央红军在李先念率领的红四方面军先头部队的迎接下，在懋功胜利会师了。
+                     1935年6月，中央红军在李先念率领的红四方面军先头部队的迎接下，在懋功胜利会师了。
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年7月">
+             <div class="item" data-text="1935年7月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/过草地.jpeg" alt="" class="img">
                     <h2 class="content-title">过草地</h2>
                     <p class="content-desc">
-                        1935年6月中旬，毛泽东率领的红一方面军从四川宝兴进入阿坝州，开始了长征途中最艰难的一段旅程。红军翻越了夹金山、梦笔山、垭口山等数座海拔在4000多米以上的高原雪山，历经千辛万苦，最终在8月进入了川西北草地......
+                        1935年6月，毛泽东率领的红一方面军从四川宝兴进入阿坝州，开始了长征途中最艰难的一段旅程。红军翻越了夹金山、梦笔山、垭口山等数座海拔在4000多米以上的高原雪山，历经千辛万苦，最终在8月进入了川西北草地......
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年9月">
+             <div class="item" data-text="1935年9月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/激战腊子口.jpeg" alt="" class="img">
                     <h2 class="content-title">激战腊子口</h2>
                     <p class="content-desc">
-                        在长征的途中，红军面临了无数的艰难险阻，其中腊子口的战斗尤为激烈和关键。那是1935年9月的一天，毛泽东率领的中国工农红军陕甘支队正沿着甘肃南部向北挺进。
+                        在长征的途中，红军面临了无数的艰难险阻，其中腊子口的战斗尤为激烈和关键。那是1935年9月12日，毛泽东率领的中国工农红军陕甘支队正沿着甘肃南部向北挺进。
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年11月">
+             <div class="item" data-text="1935年11月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/大会师.jpeg" alt="" class="img">
                     <h2 class="content-title">大会师</h2>
@@ -109,12 +118,12 @@
                     </p>
                 </div>
             </div>
-             <div class="item" data-text="1935年10月">
+             <div class="item" data-text="1935年10月" @click="goPath('/MainPage_three')" >
                 <div class="content">
                     <img src="./assets/image/胜利会师.jpg" alt="" class="img">
                     <h2 class="content-title">胜利大会师</h2>
                     <p class="content-desc">
-                       经过长征途中的长途跋涉和艰苦斗争，1935年9月13日，毛泽东率领中共中央、中央军委以及由红一方面军主力第一、第三军团与直属部队组成的陕甘支队，从俄界继续北上。红军攻占了天险腊子口，进占了哈达铺，并成功翻越了六盘山。这一路上，中央红军克服了无数艰难险阻，但始终保持着坚定的信念和昂扬的斗志。
+                       经过长征途中的长途跋涉和艰苦斗争，1935年9月12日俄界会议后，中共中央和毛泽东率领由红一方面军主力第一、第三军团与直属部队组成的陕甘支队，从俄界继续北上，攻占了天险腊子口，进占了通渭县榜罗镇，并成功翻越了六盘山。这一路上，中央红军克服了无数艰难险阻，但始终保持着坚定的信念和昂扬的斗志。1936年10月9日和22日，红四方面军和红二方面军先后在陕北同红一方面军胜利会师。 中国工农红军三大主力终于完成了人类历史上的伟大壮举。
                     </p>
                 </div>
             </div>
@@ -195,16 +204,25 @@ import $ from 'jquery'
             };
         })($);
 
-
+import PopUpWindows from './PopUpWindows.vue'
+import { mapState, mapActions } from 'vuex';
 export default {
   name: 'timeLine',
   data: function () {
-    return {}
+    return { }
+  },
+
+components: {
+    PopUpWindows,
+  },
+computed: {
+    ...mapState(['showModal']),
   },
   mounted: function () {
     this.initializeTimeline();
   },
   methods: {
+    ...mapActions(['toggleModal']),
      goHomePage(){
      this.$router.push('/');
     },
@@ -223,6 +241,20 @@ export default {
             margin: 0;
             font-family: "MiSans-Demibold",sans-serif;
              overflow-x: hidden;
+        }
+        .modal-header {
+            font-family: "MiSans-Demibold",sans-serif;
+
+            color: #be1f1f;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .modal-body {
+            font-family: "MiSans-Demibold",sans-serif;
+            color: #666;
+            font-size: 2.1em;
+            line-height: 1.5;
         }
         /**返回按钮 */
         .floating-button {

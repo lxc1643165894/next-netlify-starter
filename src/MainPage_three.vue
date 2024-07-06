@@ -17,7 +17,7 @@
 
    <nav :class="['navbar',{'active':isMenuActive}]">
       <a @click="goPath('/')">首页</a>
-      <a @click="goPath('/NewMainPage')">上一章节</a>
+      <a @click="goPath('/MainPage_two')">上一章节</a>
       <span class="space"></span>
       <a @click="goPath('/timeLine')">长征时间线</a>
    </nav>
@@ -155,7 +155,7 @@
 <section class="footer">
 
    <div class="links">
-      <a @click="goPath('/NewMainPage')" class="btn">上一章节</a>
+      <a @click="goPath('/MainPage_two')" class="btn">上一章节</a>
       <a  @click="goPath('/')" class="btn">首页</a>
      
    </div>
@@ -190,6 +190,24 @@ export default{
     ResultDescription: "蒋介石又急忙调动他的军队向这里集结时，毛泽东红军又神速隐秘地东渡赤水，秘密返回了贵州。当蒋介石弄清楚这一计谋，红军已经渡过金沙江，进入四川境内。",
     ResultImage:"四渡赤水M_5.jpg",
   },
+  {
+    Plot:" ",
+    Event: "懋功会师",
+    EventDescription: "遵义会议之后，随着全国抗日局势的急剧变化，毛泽东抗日救国的思想更加成熟，心情更加迫切了。 毛泽东一再坚持“北上”方针，就是把长征与抗日救亡自觉而有机地结合在一起。 1935年6月，中央红军和四方面军在四川懋功会师后，毛泽东和党中央及时地制定了红军统一的战略方针——继续北上，目标是建立川陕甘革命根据地。中央红军落脚陕北后，毛泽东更深刻地思考抗日反蒋的问题。1935年11月28日，中华苏维埃共和国中央政府和中国工农红军革命军事委员会发表《抗日救国宣言》，提出愿同一切抗日反蒋者订立停战协议，组织抗日联军和国防政府。",
+    EventImage: "懋功会师.jpeg",
+    Result: "激战腊子口",
+    ResultDescription: "1935年9月12日俄界会议后，中共中央和毛泽东率领由红一军、红三军、军委纵队合编成的中国工农红军陕甘支队夺取腊子口、翻越岷山，并占领通渭县榜罗镇。",
+    ResultImage:"四渡赤水M_3.jpg",
+  },
+{
+    Plot:" ",
+    Event: "吴起镇大会师",
+    EventDescription: "中共中央在榜罗镇政治局常委会议上正式确定把中共中央和陕甘支队的落脚点放在陕北，“在陕北保卫和扩大苏区”。 随后，中共中央和陕甘支队越过六盘山，抵达陕甘根据地的吴起镇（今吴旗）。 此后，毛泽东亲自指挥了迎击国民党军队“围剿”中共中央和陕甘支队的直罗镇战役，取得重大胜利。 这一胜利，不仅彻底粉碎了敌人对陕北革命根据地的第三次“围剿”，而且为中共中央把全国革命的大本营放在西北举行了奠基礼。",
+    EventImage: "大会师.jpeg",
+    Result: "胜利会师",
+    ResultDescription: "1936年10月9日和22日，红四方面军和红二方面军先后在陕北同红一方面军胜利会师。 中国工农红军三大主力终于完成了人类历史上的伟大壮举一长征。 长征使中国革命的大本营实现了从南方向北方的转移。",
+    ResultImage:"胜利会师.jpg",
+  }
 
     
 ]
