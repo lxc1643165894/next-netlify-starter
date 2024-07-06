@@ -17,7 +17,7 @@
 
    <nav :class="['navbar',{'active':isMenuActive}]">
       <a @click="goPath('/')">首页</a>
-      <a @click="goPath('/MainPage_two')">下一章节</a>
+      <a @click="goPath('/NewMainPage')">上一章节</a>
       <span class="space"></span>
       <a @click="goPath('/timeLine')">长征时间线</a>
    </nav>
@@ -36,10 +36,11 @@
 <section class="home" id="home">
 
    <div class="content">
-      <h3 data-aos="fade-up" data-aos-delay="300">长征开始</h3>
-      <img data-aos="fade-up" data-aos-delay="150" src="./assets/image/MainPage_start.png" alt="">
+      <h3 data-aos="fade-up" data-aos-delay="300">四渡赤水、巧渡金沙江</h3>
+      <img data-aos="fade-up" data-aos-delay="150" src="./assets/image/四渡赤水M_1.jpg" alt="">
       
-      <p data-aos="fade-up" data-aos-delay="450">20世纪30年代的红军长征，是中国共产党领导的人民军队在神州大地上谱写的一首惊天动地的壮歌、一部彪炳千秋的史诗;是中国共产党领导的人民军队在人类发展史上雕刻的伟大杰作，在中国革命前进道路上矗立的不朽丰碑。 毛泽东以高超的政治智慧和斗争策略，雄伟的胆略和宏大气魄，卓越的军事思想和作战指挥才能，为中国工农红军取得长征的最后胜利作出了具有决定意义的伟大贡献。</p>
+      <p data-aos="fade-up" data-aos-delay="450">在遵义会议期间，蒋介石调集40万大军，企图将只有3.5万人的中央红军围歼于乌江西北地区。
+</p>
       <a data-aos="fade-up" data-aos-delay="600" class="btn" @click="scrollTo('about')">开始</a>   
    </div>
 
@@ -53,7 +54,7 @@
 
 <!-- about section starts  -->
 
-<section class="about" >
+<!-- <section class="about" >
 
    <div class="image" data-aos="fade-right" data-aos-delay="150" >
       <img src="./assets/image/MainPage_why.jpg" alt="" id="about">
@@ -64,7 +65,7 @@
       <p>1933年初，日军大举入侵华北，中华民族的危机日益严重，国民党政府却置民族危亡于不顾，仍旧坚持推行“攘外必先安内”的反动方针，决心要消灭共产党和红军......</p>
    </div>
 
-</section>
+</section> -->
 
 <!-- about section ends -->
 
@@ -72,7 +73,7 @@
 
 <section class="blogs" id="blogs" v-for="(item, index) in items" :key="index">
 
-   <div class="heading">
+   <div class="heading" id="about">
       <!-- <img src="./assets/image/logo2.png" alt=""> -->
       <h3>{{item.Plot}}</h3>
    </div>
@@ -154,8 +155,8 @@
 <section class="footer">
 
    <div class="links">
-      <a @click="goPath('/')" class="btn">返回首页</a>
-      <a @click="goPath('/MainPage_two')" class="btn">下一章节</a>
+      <a @click="goPath('/NewMainPage')" class="btn">上一章节</a>
+      <a  @click="goPath('/')" class="btn">首页</a>
      
    </div>
 
@@ -169,69 +170,36 @@
 export default{
   data(){
   return{
-    isMenuActive:false,
+    isMenuActive:false,//menu的状态
    items: [
   {
-    Plot:"失利",
-    Event: "冒险主义",
-    EventDescription: "中共中央领导人博古和共产国际派来的军事顾问李德（德国共产党党员），先是实行冒险主义的进攻战略，后又实行保守主义的防御战略，他们放弃过去几次反“围剿”中行之有效的积极防御方针，主张“御敌于国门之外”，使红军陷于被动地位；在进攻遭受挫折后，又采取消极防御方针，实行分兵防御、“短促突击”，企图用阵地战代替游击战和运动战，同装备优良的国民党军队拼消耗。",
-    EventImage: "MainPage_1_1.png",
-    Result: "结果",
-    ResultDescription: "红军屡战失利，导致苏区日渐缩小。",
-    ResultImage:"MainPage_1_2.jpg",
+    Plot:" ",
+    Event: "一渡赤水",
+    EventDescription: "目前严峻局势，毛泽东率领部队向北转移，在川黔交界的赤水、土城地区集中。但出于对敌情估计不足，与川军郭勋祺师的仗打得很不顺利。毛泽东选择撤退，带领红军在猴场、土城南北渡赤水河西进。1935年1月29日，中央红军3万多人安全渡过赤水河。",
+    EventImage: "四渡赤水M_2.jpg",
+    Result: "二渡赤水",
+    ResultDescription: "中央红军原来准备经川南古蔺、叙永向长宁集中，从宜宾附近北渡长江。但发现各路追敌已逼近川南，而且川军潘文华部已扼守长江北岸。毛泽东提出回师东进、再渡赤水，重占遵义，红军从二郎滩、太平渡再渡赤水河，一举攻取了天险类山关，再占遵义城。这是中央红军长征以来取得的最大胜利，也是毛泽东重新指挥红军后取得的第一次重大胜利。",
+    ResultImage:"四渡赤水M_3.jpg",
   },
     {
-    Plot:"错失良机",
-    Event: "“左”倾",
-    EventDescription: "1933年11月，国民党军第十九路军将领在福建成立“中华共和国人民革命政府”，公开宣布抗日反蒋，并派代表同红军谈判合作。这对红军打破第五次“围剿”是一个有利的机会。但“左”倾领导人继续把中间派看成最危险的敌人，不肯在军事上同第十九路军进行配合",
-    EventImage: "MainPage_2_1.jpg",
-    Result: "结果",
-    ResultDescription: "使红军坐失良机。蒋介石在打败第十九路军后，完成对中央根据地的四面包围。",
-    ResultImage:"MainPage_2_2.jpg",
-  },
-    {
-    Plot:"损失惨重",
-    Event: "广昌战役",
-    EventDescription: "1934年4月，中央红军（1月由红一方面军改称）在江西省广昌与国民党军进行决战，损失惨重。1934年7月，中华苏维埃共和国中央革命军事委员会（简称中革军委）命令红军第7军团组成北上抗日先遣队，向闽浙皖赣边挺进，建立新的苏区；命令红军第6军团从湘赣苏区突围西征，到湘中发展游击战争。两个军团分别北上、西征，意在调动国民党“围剿”军，以减轻中央苏区的压力。但仍未能达到目的。1934年10月初，国民党军向中央苏区的中心区域进攻，迅速占领了兴国、宁都、石城一线，红军在苏区内打破国民党军的“围剿”已无可能。",
-    EventImage: "MainPage_3_1.jpg",
-    Result: "结果",
-    ResultDescription: "第五次反围剿失败",
-    ResultImage:"MainPage_3_2.jpg",
-  },
-    {
-    Plot:"于都出发",
-    Event: "做出改变",
-    EventDescription: "由于王明“左”倾教条主义路线的错误，中央领导机关和红军主力决定推出根据地，1934年10月18日傍晚中央红军长征从于都集结出发。",
-    EventImage: "MainPage_4_1.jpg",
-    Result: "",
-    ResultDescription: "",
-    ResultImage:"MainPage_4_2.jpg",
-  },
-    {
-    Plot:"突围",
-    Event: "战略撤退",
-    EventDescription: "从17日起，中央红军主力第一、第三、第五、第八、第九军团及中央、军委机关和直属部队8.6万余人，陆续从集结地出发突围。随后，红二十五军，红四方面军，红二、红六军团（即后来的红二方面军）也相继撤出鄂豫皖、川陕、湘鄂川黔等根据地，进行战略转移。",
-    EventImage: "MainPage_5_1.jpg",
-    Result: "突破封锁",
-    ResultDescription: "10月21日，红军开始突围，25日突破第一道封锁线11月5日至8日，在湖南的汝城和广东的城口之间突破第二道封锁线；11月13日至15日，在郴县、良田、宜章、乐昌之间突破了第三道封锁线；11月27日至12月1日，红军苦战五昼夜，从广西全州、兴安间抢渡湘江，突破了国民党军的第四道封锁线。这就是著名的湘江战役，是突围以来最壮烈、最关键的一仗，是关系中央红军的生死存亡之战，也是决定长征前途的命运之战。毛泽东军与优势之敌苦战，撕开了敌重兵设防的封锁线，粉碎了蒋介石围歼红军于湘江以东的企图。但是，红军也为此付出了极为惨重的代价，部队指战员和中央机关人员由长征出发时的8万多人锐减至3万余人。",
-    ResultImage:"MainPage_5_2.jpg",
-  },
-    {
-    Plot:"通道会议",
-    Event: "",
-    EventDescription: "王明左倾主义慌了。他们想“逃跑”，并把战略转移变成搬家式的行动",
-    EventImage: "MainPage_6_1.jpg",
-    Result: "决策",
-    ResultDescription: "1934年12月12日，中央领导人召开通道会议，讨论红军行动方向，若红军继续前往湘西，蒋介石已在红军北上的路上设置重兵防守，全军覆灭。李德主张从通道向北，与转战在湖南西部的贺龙、萧克的红二、红六军团会合，毛泽东强烈反对前往湘西的决议，在行军路上，他与中革军委副主席的王稼祥，中央政治局常委张闻天倾心交谈，庆幸的是，他们同意并支持了毛泽东的主张，后又取得了周恩来、朱德等同志的支持李德等人却坚持己见，不愿接受。在通道会议上，毛泽东主张前往贵州的建议被采纳，中央红军开始改变长征初期的战略计划，变被动挨打为主动进击。在黎平会议上，毛泽东进一步主张继续向贵州西北进军，在川黔边建立根据地。在猴场会议上，毛泽东主张在川黔边地区建立新的根据地，被会议以《关于渡江后新的行动方针的决定》确定下来。，",
-    ResultImage:"MainPage_6_2.png",
+    Plot:"",
+    Event: "三渡赤水 ",
+    EventDescription: "当红军到达遵义后，蒋介石从汉口飞到重庆“督剿”，重新调整部署，亲自指挥部队向遵义一带合围过来，企图把中央红军消灭在遵义、鸭溪这一狭小地区。毛泽东镇定自若地指挥中央红军忽东忽西、神出鬼没地穿插于国民党重兵之间。 为进一步迷惑敌人，调动敌军西移，毛泽东指挥中央红军分别从茅台镇附近三个渡口渡过赤水河，重返川南的古蔺、叙永地区。",
+    EventImage: "四渡赤水M_4.jpg",
+    Result: " 四度赤水",
+    ResultDescription: "蒋介石又急忙调动他的军队向这里集结时，毛泽东红军又神速隐秘地东渡赤水，秘密返回了贵州。当蒋介石弄清楚这一计谋，红军已经渡过金沙江，进入四川境内。",
+    ResultImage:"四渡赤水M_5.jpg",
   },
 
+    
 ]
 
   };
 
 },
+
 methods: {
+   
     goPath(path){
        this.$router.push(path);
     },
@@ -454,7 +422,6 @@ section {
   line-height: 2;
   color: #aaa;
   padding: 2rem 0;
-
 }
 
 .service {
@@ -584,8 +551,6 @@ section {
   line-height: 2;
   color: #aaa;
   padding: 2rem 0;
-
-
 }
 
 .about .content .icons {

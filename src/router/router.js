@@ -1,10 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+
 import homePage from "../homePage.vue";
 import mainPage from "../mainPage.vue";
 import timeLine from "../timeLine.vue";
 import NewHomePage from '../NewHomePage.vue';
 import NewMainPage from '../NewMainPage.vue';
 import MainPage_two from "../MainPage_two.vue";
+import MainPage_three from "../MainPage_three.vue";
 
 
 const routes = [
@@ -38,12 +40,26 @@ const routes = [
         path:'/MainPage_two',
         name:'MainPage_two',
         component:MainPage_two
+    },
+    {
+        path:'/MainPage_three',
+        name:MainPage_three,
+        component:MainPage_three
     }
+    
 ];
+
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes,
+    scrollBehavior() {
+       
+       {
+           
+            return { x: 0, y: 0 };
+        }
+    }
 });
 
 // router.beforeEach((to, from, next) => {
@@ -61,5 +77,9 @@ const router = createRouter({
 //         router.replace({ name: 'Home', query: { firstLoad: false } });
 //     }
 // });
-
+router.beforeEach((to, from, next) => {
+    // 滚动到页面顶部
+    window.scrollTo(0, 0);
+    next();
+});
 export default router;
